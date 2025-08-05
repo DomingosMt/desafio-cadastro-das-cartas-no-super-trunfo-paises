@@ -21,15 +21,14 @@ int main() {
     //1ª parte: Obter dados da primeira carta.
 
     printf("Digite o estado: ");
-    scanf("%c", &estado1);
+    scanf(" %c", &estado1);
 
     printf("Digite o código: ");
-    scanf("%s", &codigo1);
+    scanf("%s", codigo1);
 
     printf("Digite o nome da Cidade: ");
-    scanf("%s", &nomecidade1);
-    //O nome da cidade precisa ser digitado sem espaços, pois por motivos acadêmicos, não estou usando strings e arrays.
-
+    scanf(" %[^\n]", nomecidade1);
+  
     printf("Digite a população: ");
     scanf("%d", &populacao1);
 
@@ -61,10 +60,10 @@ int main() {
     scanf(" %c", &estado2);
 
     printf("Digite o código: ");
-    scanf("%s", &codigo2);
+    scanf("%s", codigo2);
 
     printf("Digite o nome da Cidade: ");
-    scanf("%s", &nomecidade2);
+    scanf(" %[^\n]", nomecidade2);
 
     printf("Digite a população: ");
     scanf("%d", &populacao2);
