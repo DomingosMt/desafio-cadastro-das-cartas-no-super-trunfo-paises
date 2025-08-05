@@ -31,4 +31,4 @@ O sistema precisa ser responsivo e interativo, onde os dados das cartas precisam
 
 # 🏁 Conclusão
 
-Exercício concluído com sucesso, com duas versões inseridas por questões de atualização e formatação do código. 
+Exercício concluído com sucesso, com duas versões inseridas por questões de atualização e formatação do código. No futuro, será aplicado mais linhas de código sistemáticas, de cálculos e de comparação.
