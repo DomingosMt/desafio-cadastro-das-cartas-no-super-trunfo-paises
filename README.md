@@ -1,6 +1,6 @@
 # Desafio Super Trunfo - Países - Cadastro das Cartas
 
-olá, tudo bem? Neste repositório, fui encarregado de criar um jogo chamado Super Trunfo com Países! O programa deve ser feito na linguagem **C**!
+Olá, tudo bem? Neste repositório, fui encarregado de criar um jogo chamado Super Trunfo com Países! O programa deve ser feito na linguagem **C**!
 
 Exercício do curso de graduação tecnólogo de Análise e Desenvolvimento de Sistemas da Estácio!
 
@@ -13,6 +13,8 @@ Para isso, utilizei uma série de etapas:
 **2º** Criar os comandos para entrada das informações das cartas 1 e 2
 
 **3º** Escrever os comandos de saída dessas informações de forma ordenada e transparente.
+
+## 🎮 Nível Novato: Cadastro Básico
 
 # 🧑‍💻 O que foi utilizado:
 
@@ -29,6 +31,15 @@ Para isso, utilizei uma série de etapas:
 
 O sistema precisa ser responsivo e interativo, onde os dados das cartas precisam ser informados diretamente pelo terminal e posteriormente mostrados no mesmo!
 
-# 🏁 Conclusão
+## 🛡️ Nível Aventureiro: Cálculo de Atributos
 
-Exercício concluído com sucesso, com duas versões inseridas por questões de atualização e formatação do código. No futuro, será aplicado mais linhas de código sistemáticas, de cálculos e de comparação.
+# 🧑‍💻 O que foi utilizado:
+
+🧩 **Atributos**:
+*   Densidade Populacional: População / Área (`float`)
+*   PIB per Capita: PIB / População (`float`)
+
+📥 **Entrada** e 📤 **Saída de Dados:**
+
+*   Mesma entrada do nível Novato.
+*   A saída exibirá também os atributos calculados.
