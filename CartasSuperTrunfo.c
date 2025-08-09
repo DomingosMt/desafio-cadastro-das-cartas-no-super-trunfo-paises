@@ -13,9 +13,12 @@ int main() {
     float area1, area2;
     float PIB1, PIB2;
     int NumerodePontosTuristicos1, NumerodePontosTuristicos2;
+    float densidadepopul1, densidadepopul2;
+    float pibpercapita1, pibpercapita2;
 
     
-    printf("Jogo de Cartas Super Trunfo!\n\n");
+    printf("*** Jogo de Cartas Super Trunfo! ***\n");
+    printf("Bem-vindo ao Jogo de Cartas Super Trunfo!!\n\n");
     printf("Carta 1\n\n");
     
     //1ª parte: Obter dados da primeira carta.
@@ -41,6 +44,12 @@ int main() {
     printf("Digite o número de pontos turísticos: ");
     scanf("%d", &NumerodePontosTuristicos1);
 
+    //Cálculo da Densidade Populacional da primeira carta:
+    densidadepopul1 = populacao1 / area1;
+
+    //Cálculo do PIB per Capita da primeira carta:
+    pibpercapita1 = (PIB1 * 1000000000) / populacao1;
+
     // 2ª parte: Exibir dados da primeira carta.
 
     printf("Carta1: \n");
@@ -51,6 +60,8 @@ int main() {
     printf("Área: %.2f km²\n", area1);
     printf("PIB: %.2f bilhões de reais\n", PIB1);
     printf("Número de Pontos Turísticos: %d\n", NumerodePontosTuristicos1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadepopul1);
+    printf("PIB per Capita: %.2f reais\n\n", pibpercapita1);
 
     //3ª parte: Obter dados da segunda carta.
 
@@ -77,6 +88,12 @@ int main() {
     printf("Digite o número de pontos turísticos: ");
     scanf("%d", &NumerodePontosTuristicos2);
 
+     //Cálculo da Densidade Populacional da segunda carta:
+    densidadepopul2 = populacao2 / area2;
+
+    //Cálculo do PIB per Capita da segunda carta:
+    pibpercapita2 = (PIB2 * 1000000000) / populacao2;
+
     // 4ª parte: Exibir dados da segunda carta.
 
     printf("Carta2: \n");
@@ -87,6 +104,8 @@ int main() {
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", PIB2);
     printf("Número de Pontos Turísticos: %d\n", NumerodePontosTuristicos2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadepopul2);
+    printf("PIB per Capita: %.2f reais\n\n", pibpercapita2);
 
     //Fim do Exercício!!
 
