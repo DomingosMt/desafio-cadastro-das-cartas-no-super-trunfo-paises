@@ -12,6 +12,7 @@ int main() {
     unsigned int populacao1, populacao2;
     float area1, area2;
     float PIB1, PIB2;
+    int atributo;
     int NumerodePontosTuristicos1, NumerodePontosTuristicos2;
     float densidadepopul1, densidadepopul2;
     float pibpercapita1, pibpercapita2;
@@ -110,7 +111,113 @@ int main() {
     printf("Densidade Populacional: %.2f hab/km²\n", densidadepopul2);
     printf("PIB per Capita: %.2f reais\n\n", pibpercapita2);
 
+    //Escolha do atributo para comparar as cartas
+    printf("*** Escolha do Atributo ***\n\n");
+    printf("Escolha um dos seguintes atributos:\n");
+    printf("1 - Nome do País\n");
+    printf("2 - População\n");
+    printf("3 - Área\n");
+    printf("4 - PIB\n");
+    printf("5 - Número de Pontos Turísticos\n");
+    printf("6 - Densidade Populacional\n");
+    scanf("%d", &atributo);
 
+    //Menu Interativo para escolha do atributo
+    switch (atributo)
+    {
+    case 1:
+        printf("Você escolheu o atributo Nome do País.\n\n");
+        break;
+    case 2:
+        printf("Você escolheu o atributo População.\n\n");
+        break;
+    case 3:
+        printf("Você escolheu o atributo Área.\n\n");
+        break;
+    case 4:
+        printf("Você escolheu o atributo PIB.\n\n");
+        break;
+    case 5:
+        printf("Você escolheu o atributo Número de Pontos Turísticos.\n\n");
+        break;
+    case 6:
+        printf("Você escolheu o atributo Densidade Populacional.\n\n");
+        break;
+    
+    default:
+        printf("Opção inválida.\n\n");
+        break;
+    }
+
+    //LÓGICA DE COMPARAÇÃO DAS CARTAS
+    if (atributo == 1)
+    {
+        printf("Comparação pelo Nome do País não é possível.\n");
+    } else if (atributo == 2)
+    {
+        if (populacao1 > populacao2)
+        {
+            printf("Carta 1 é maior que Carta 2 em População.\n");
+        } else if (populacao1 < populacao2)
+        {
+            printf("Carta 2 é maior que Carta 1 em População.\n");
+        } else 
+        {
+            printf("As duas cartas são iguais em População.\n");
+        }
+    } else if (atributo == 3)
+    {
+        if (area1 > area2)
+        {
+            printf("Carta 1 é maior que Carta 2 em Área.\n");
+        } else if (area1 < area2)
+        {
+            printf("Carta 2 é maior que Carta 1 em Área.\n");
+        } else 
+        {
+            printf("As duas cartas são iguais em Área.\n");
+        }
+    } else if (atributo == 4)
+    {
+        if (PIB1 > PIB2)
+        {
+            printf("Carta 1 é maior que Carta 2 em PIB.\n");
+        } else if (PIB1 < PIB2)
+        {
+            printf("Carta 2 é maior que Carta 1 em PIB.\n");
+        } else 
+        {
+            printf("As duas cartas são iguais em PIB.\n");
+        }
+    } else if (atributo == 5)
+    {
+        if (NumerodePontosTuristicos1 > NumerodePontosTuristicos2)
+        {
+            printf("Carta 1 é maior que Carta 2 em Número de Pontos Turísticos.\n");
+        } else if (NumerodePontosTuristicos1 < NumerodePontosTuristicos2)
+        {
+            printf("Carta 2 é maior que Carta 1 em Número de Pontos Turísticos.\n");
+        } else 
+        {
+            printf("As duas cartas são iguais em Número de Pontos Turísticos.\n");
+        }
+    } else if (atributo == 6)
+    {
+        if (densidadepopul1 > densidadepopul2)
+        {
+            printf("Carta 1 é maior que Carta 2 em Densidade Populacional.\n");
+        } else if (densidadepopul1 < densidadepopul2)
+        {
+            printf("Carta 2 é maior que Carta 1 em Densidade Populacional.\n");
+        } else 
+        {
+            printf("As duas cartas são iguais em Densidade Populacional.\n");
+        }
+    } else 
+    {
+        printf("Atributo inválido para comparação.\n");
+    }
+    
     //Cálculo do Super Poder das cartas
 
     printf("** Cálculo do Super Poder **\n\n");
@@ -118,10 +225,18 @@ int main() {
     //Atribuição de inverso da Densidade populacional 1
     densidadepopul1 = 1.0f / densidadepopul1;
 
+    //CONTINUAR DE ONDED PAROU
+
+    if (atributo == 1)
+    {
+        /* code */
+    }
+    
     printf("* Carta 1 *\n");
     SuperPoder1 = populacao1 + area1 + (PIB1 * 1000000000.0f) + (float) NumerodePontosTuristicos1 + pibpercapita1 + densidadepopul1;
 
         printf("O valor do SuperPoder da Carta 1 é: %.2f\n\n", SuperPoder1);
+
 
 
     //Atribuição de inverso da Densidade populacional 2
