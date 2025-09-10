@@ -111,6 +111,8 @@ int main() {
     printf("Densidade Populacional: %.2f hab/km²\n", densidadepopul2);
     printf("PIB per Capita: %.2f reais\n\n", pibpercapita2);
 
+
+    printf("** Comparação de Atributos **\n\n");
     //Escolha do atributo para comparar as cartas
     printf("*** Escolha do Atributo ***\n\n");
     printf("Escolha um dos seguintes atributos:\n");
@@ -203,12 +205,12 @@ int main() {
         }
     } else if (atributo == 6)
     {
-        if (densidadepopul1 > densidadepopul2)
+        if (densidadepopul1 < densidadepopul2)
         {
-            printf("Carta 1 é maior que Carta 2 em Densidade Populacional.\n");
-        } else if (densidadepopul1 < densidadepopul2)
+            printf("Carta 1 é menor que Carta 2 em Densidade Populacional.\n");
+        } else if (densidadepopul1 > densidadepopul2)
         {
-            printf("Carta 2 é maior que Carta 1 em Densidade Populacional.\n");
+            printf("Carta 2 é menor que Carta 1 em Densidade Populacional.\n");
         } else 
         {
             printf("As duas cartas são iguais em Densidade Populacional.\n");
@@ -217,65 +219,107 @@ int main() {
     {
         printf("Atributo inválido para comparação.\n");
     }
+
+    // Exibição dos Resultados da Comparação
+    printf("\n*** Exibição da Comparação ***\n\n");
     
-    //Cálculo do Super Poder das cartas
+    printf("** Carta 1: **\n\n");
+    printf("Nome do países: %s\n", nomecidade1, nomecidade2);
+    printf("Atributo selecionado: %d\n", atributo);
 
-    printf("** Cálculo do Super Poder **\n\n");
-
-    //Atribuição de inverso da Densidade populacional 1
-    densidadepopul1 = 1.0f / densidadepopul1;
-
-    //CONTINUAR DE ONDED PAROU
-
+    printf("O valor atributo da carta 1 é: ");
     if (atributo == 1)
     {
-        /* code */
-    }
-    
-    printf("* Carta 1 *\n");
-    SuperPoder1 = populacao1 + area1 + (PIB1 * 1000000000.0f) + (float) NumerodePontosTuristicos1 + pibpercapita1 + densidadepopul1;
-
-        printf("O valor do SuperPoder da Carta 1 é: %.2f\n\n", SuperPoder1);
-
-
-
-    //Atribuição de inverso da Densidade populacional 2
-    densidadepopul2 = 1.0f / densidadepopul2;
-
-    printf("* Carta 2 *\n");
-    SuperPoder2 = populacao2 + area2 + (PIB2 * 1000000000.0f) + (float) NumerodePontosTuristicos2 + pibpercapita2 + densidadepopul2;
-
-        printf("O valor do SuperPoder da Carta 2 é: %.2f\n\n", SuperPoder2);
-
-
-    //Comparação das Cartas
-
-    printf("*** Comparação das Cartas: ***\n\n");
-     
-        printf("População: %d\n", populacao1 > populacao2); // 1 se C1 > C2, 0 caso contrário
-        printf("Área: %d\n", area1 > area2);
-        printf("PIB: %d\n", PIB1 > PIB2);
-        printf("Pontos Turísticos: %d\n", NumerodePontosTuristicos1 > NumerodePontosTuristicos2);
-        printf("PIB per capita: %d\n", pibpercapita1 > pibpercapita2);
-        printf("Super Poder: %d\n", SuperPoder1 > SuperPoder2);
-
-        // Para Densidade Populacional: "menor vence"
-        printf("Densidade Populacional: %d\n\n", densidadepopul1 < densidadepopul2); // 1 se C1 < C2 (C1 tem menor densidade original, logo vence), 0 caso contrário
-
-    printf("*** Comparação de Atributos *** (Atributo Área)\n\n");
-
-    if (area1 > area2)
+        printf("Atributo Nome sem valor.\n");
+    } else if (atributo == 2)
     {
-        printf("Carta 1 - São Paulo (SP): %.2f\n", area1);
-        printf("Carta 2 - Rio de Janeiro (RJ): %.2f\n", area2);
-        printf("Resultado: Carta 1 (%s) venceu!)\n", nomecidade1);
-    } else {
-        printf("Carta 1 - São Paulo (SP): %.2f\n", area1);
-        printf("Carta 2 - Rio de Janeiro (RJ): %.2f\n", area2);
-        printf("Resultado: Carta 2 (%s) venceu!\n", nomecidade2);
+        printf("%.2lu\n", populacao1);
+
+    } else if (atributo == 3)
+    {
+        printf("%.2f\n", area1);
+
+    } else if (atributo == 4)
+    {
+        printf("%.2f\n", PIB1);
+
+    } else if (atributo == 5)
+    {
+        printf("%d\n", NumerodePontosTuristicos1);
+
+    } else if (atributo == 6)
+    {
+        printf("%.2f\n", densidadepopul1);
     }
+
+    printf("O valor atributo da carta 2 é: ");
+    if (atributo == 1)
+    {
+        printf("Atributo Nome sem valor.\n");
+    } else if (atributo == 2)
+    {
+        printf("%.2lu\n", populacao2);
+
+    } else if (atributo == 3)
+    {
+        printf("%.2f\n", area2);
+
+    } else if (atributo == 4)
+    {
+        printf("%.2f\n", PIB2);
+
+    } else if (atributo == 5)
+    {
+        printf("%d\n", NumerodePontosTuristicos2);
+
+    } else if (atributo == 6)
+    {
+        printf("%.2f\n", densidadepopul2);
+    }
+
+    
+
+    // Cálculo do Super Poder das cartas
+
+    // printf("** Cálculo do Super Poder **\n\n");
+
+    // //Atribuição de inverso da Densidade populacional 1
+    // densidadepopul1 = 1.0f / densidadepopul1;
+
+    // if (atributo == 1)
+    // {
+    //     /* code */
+    // }
+
+    // //Cálculo do Super Poder da Carta 1
+    
+    // //Comparação das Cartas
+
+    // printf("*** Comparação das Cartas: ***\n\n");
+     
+    //     printf("População: %d\n", populacao1 > populacao2); // 1 se C1 > C2, 0 caso contrário
+    //     printf("Área: %d\n", area1 > area2);
+    //     printf("PIB: %d\n", PIB1 > PIB2);
+    //     printf("Pontos Turísticos: %d\n", NumerodePontosTuristicos1 > NumerodePontosTuristicos2);
+    //     printf("PIB per capita: %d\n", pibpercapita1 > pibpercapita2);
+    //     printf("Super Poder: %d\n", SuperPoder1 > SuperPoder2);
+
+    //     // Para Densidade Populacional: "menor vence"
+    //     printf("Densidade Populacional: %d\n\n", densidadepopul1 < densidadepopul2); // 1 se C1 < C2 (C1 tem menor densidade original, logo vence), 0 caso contrário
+
+    // printf("*** Comparação de Atributos *** (Atributo Área)\n\n");
+
+    // if (area1 > area2)
+    // {
+    //     printf("Carta 1 - São Paulo (SP): %.2f\n", area1);
+    //     printf("Carta 2 - Rio de Janeiro (RJ): %.2f\n", area2);
+    //     printf("Resultado: Carta 1 (%s) venceu!)\n", nomecidade1);
+    // } else {
+    //     printf("Carta 1 - São Paulo (SP): %.2f\n", area1);
+    //     printf("Carta 2 - Rio de Janeiro (RJ): %.2f\n", area2);
+    //     printf("Resultado: Carta 2 (%s) venceu!\n", nomecidade2);
+    // }
     
     //Fim do Exercício!!
-
     return 0;
 }
