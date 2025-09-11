@@ -112,9 +112,9 @@ int main() {
     printf("PIB per Capita: %.2f reais\n\n", pibpercapita2);
 
 
-    printf("** Comparação de Atributos **\n\n");
+    printf("*** Comparação de Atributos **\n\n");
     //Escolha do atributo para comparar as cartas
-    printf("*** Escolha do Atributo ***\n\n");
+    printf("** Escolha do Atributo **\n\n");
     printf("Escolha um dos seguintes atributos:\n");
     printf("1 - Nome do País\n");
     printf("2 - População\n");
@@ -151,6 +151,47 @@ int main() {
         break;
     }
 
+    // Exibição dos Resultados da Comparação
+    printf("\n*** Exibição da Comparação ***\n\n");
+    
+    printf("| Nome do países:  %s e %s\n", nomecidade1, nomecidade2);
+    printf("| Atributo selecionado:  %d\n", atributo);
+    printf("| Valor dos atributos: \n");
+
+    if (atributo == 1)
+    {
+        printf("Atributo sem valor\n");
+    } else if (atributo == 2)
+    {
+        printf("Carta 1: %.2lu\n", populacao1);
+        printf("Carta 2: %.2lu\n", populacao2);
+    }
+     else if (atributo == 3)
+    {
+        printf("Carta 1: %.2f\n", area1);
+        printf("Carta 2: %.2f\n", area2);
+    }
+     else if (atributo == 4)
+    {
+        printf("Carta 1: %.2f\n", PIB1);
+        printf("Carta 2: %.2f\n", PIB2);
+    }
+     else if (atributo == 5)
+    {
+        printf("Carta 1: %.2d\n", NumerodePontosTuristicos1);
+        printf("Carta 2: %.2d\n", NumerodePontosTuristicos2);
+    }
+     else if (atributo == 6)
+    {
+        printf("Carta 1: %.2f\n", densidadepopul1);
+        printf("Carta 2: %.2f\n", densidadepopul2);
+    } else
+    {
+        printf("Atributo Inválido!\n");
+    }
+
+    printf("| Carta vencedora: \n");
+
     //LÓGICA DE COMPARAÇÃO DAS CARTAS
     if (atributo == 1)
     {
@@ -159,125 +200,68 @@ int main() {
     {
         if (populacao1 > populacao2)
         {
-            printf("Carta 1 é maior que Carta 2 em População.\n");
+            printf("-- Carta 1 é a vencedora!! --\n");
         } else if (populacao1 < populacao2)
         {
-            printf("Carta 2 é maior que Carta 1 em População.\n");
+            printf("-- Carta 1 é a vencedora!! --\n");
         } else 
         {
-            printf("As duas cartas são iguais em População.\n");
+            printf("EMPATE!\n");
         }
     } else if (atributo == 3)
     {
         if (area1 > area2)
         {
-            printf("Carta 1 é maior que Carta 2 em Área.\n");
+            printf("-- Carta 1 é a vencedora!! --\n");
         } else if (area1 < area2)
         {
-            printf("Carta 2 é maior que Carta 1 em Área.\n");
+            printf("-- Carta 2 é a vencedora!! --\n");
         } else 
         {
-            printf("As duas cartas são iguais em Área.\n");
+            printf("EMPATE!\n");
         }
     } else if (atributo == 4)
     {
         if (PIB1 > PIB2)
         {
-            printf("Carta 1 é maior que Carta 2 em PIB.\n");
+            printf("-- Carta 1 é a vencedora!! --\n");
         } else if (PIB1 < PIB2)
         {
-            printf("Carta 2 é maior que Carta 1 em PIB.\n");
+            printf("-- Carta 2 é a vencedora!! --\n");
         } else 
         {
-            printf("As duas cartas são iguais em PIB.\n");
+            printf("EMPATE!\n");
         }
     } else if (atributo == 5)
     {
         if (NumerodePontosTuristicos1 > NumerodePontosTuristicos2)
         {
-            printf("Carta 1 é maior que Carta 2 em Número de Pontos Turísticos.\n");
+            printf("-- Carta 1 é a vencedora!! --\n");
         } else if (NumerodePontosTuristicos1 < NumerodePontosTuristicos2)
         {
-            printf("Carta 2 é maior que Carta 1 em Número de Pontos Turísticos.\n");
+            printf("-- Carta 2 é a vencedora!! --\n");
         } else 
         {
-            printf("As duas cartas são iguais em Número de Pontos Turísticos.\n");
+            printf("EMPATE!\n");
         }
     } else if (atributo == 6)
     {
         if (densidadepopul1 < densidadepopul2)
         {
-            printf("Carta 1 é menor que Carta 2 em Densidade Populacional.\n");
+            printf("-- Carta 1 é a vencedora!! --\n");
         } else if (densidadepopul1 > densidadepopul2)
         {
-            printf("Carta 2 é menor que Carta 1 em Densidade Populacional.\n");
+            printf("-- Carta 2 é a vencedora!! --\n");
         } else 
         {
-            printf("As duas cartas são iguais em Densidade Populacional.\n");
+            printf("EMPATE!\n");
         }
     } else 
     {
         printf("Atributo inválido para comparação.\n");
     }
-
-    // Exibição dos Resultados da Comparação
-    printf("\n*** Exibição da Comparação ***\n\n");
     
-    printf("** Carta 1: **\n\n");
-    printf("Nome do países: %s\n", nomecidade1, nomecidade2);
-    printf("Atributo selecionado: %d\n", atributo);
 
-    printf("O valor atributo da carta 1 é: ");
-    if (atributo == 1)
-    {
-        printf("Atributo Nome sem valor.\n");
-    } else if (atributo == 2)
-    {
-        printf("%.2lu\n", populacao1);
-
-    } else if (atributo == 3)
-    {
-        printf("%.2f\n", area1);
-
-    } else if (atributo == 4)
-    {
-        printf("%.2f\n", PIB1);
-
-    } else if (atributo == 5)
-    {
-        printf("%d\n", NumerodePontosTuristicos1);
-
-    } else if (atributo == 6)
-    {
-        printf("%.2f\n", densidadepopul1);
-    }
-
-    printf("O valor atributo da carta 2 é: ");
-    if (atributo == 1)
-    {
-        printf("Atributo Nome sem valor.\n");
-    } else if (atributo == 2)
-    {
-        printf("%.2lu\n", populacao2);
-
-    } else if (atributo == 3)
-    {
-        printf("%.2f\n", area2);
-
-    } else if (atributo == 4)
-    {
-        printf("%.2f\n", PIB2);
-
-    } else if (atributo == 5)
-    {
-        printf("%d\n", NumerodePontosTuristicos2);
-
-    } else if (atributo == 6)
-    {
-        printf("%.2f\n", densidadepopul2);
-    }
-
-    
 
     // Cálculo do Super Poder das cartas
 
